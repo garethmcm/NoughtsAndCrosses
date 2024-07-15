@@ -23,15 +23,6 @@ public class Board
             }
         }
     }
-    
-    public void startGame()
-    {
-        while (!winCheck)
-        {
-            displayBoard();
-            makeMove();
-        }
-    }
 
     public void displayBoard()
     {
@@ -43,9 +34,37 @@ public class Board
         Console.Write(board[2,0].mark + "  | " + board[2,1].mark + " |  "+ board[2,2].mark + "\n");
     }
 
-    public void makeMove()
+    public void playerMove()
     {
-        
+        bool emptyPlace = true;
+        int row = 0;
+        int col = 0;
+        while (!emptyPlace)
+        {
+            while (!emptyPlace)
+            {
+                if(board[row,col].mark.Equals(' '))
+                {
+                    board[row, col].mark = 'x';
+                    emptyPlace = false;
+                }
+                else
+                {
+                    row++;
+                }
+            }
+
+            col++;
+
+        }
+        Console.WriteLine("It's your move");
+        bool playPlace = false;
+        while (!playPlace)
+        {
+            ConsoleKeyInfo keyInput = Console.ReadKey(true);
+            // switch:
+                
+        }
     }
     
 }

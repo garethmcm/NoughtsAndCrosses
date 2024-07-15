@@ -6,5 +6,6 @@ public class Program
     {
         Board board = new Board();
         board.displayBoard();
+        
     }
 }
