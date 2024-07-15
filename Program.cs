@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using NoughtsAndCrosses;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Board board = new Board();
+        board.displayBoard();
+    }
+}
